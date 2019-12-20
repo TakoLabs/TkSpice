@@ -5,8 +5,10 @@
 
 class Pin;
 
-class Line : public SymbolItem
+class Line : public QObject, public SymbolItem
 {
+    Q_OBJECT
+    Q_INTERFACES(QGraphicsItem)
 public:
     Line(QGraphicsItem *parent = nullptr);
 
@@ -18,6 +20,10 @@ public:
 
     QRectF boundingRect() const override;
     void paint(QPainter*, const QStyleOptionGraphicsItem*, QWidget*) override;
+
+private slots:
+    void onPin1Move(QPointF new_pos);
+    void onPin2Move(QPointF new_pos);
 
 private:
     QPointF begin, end;

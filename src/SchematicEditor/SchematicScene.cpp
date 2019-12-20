@@ -5,6 +5,7 @@
 #include <QtGui/QPainter>
 #include <QtCore/QDebug>
 
+
 SchematicScene::SchematicScene(QObject* parent) :
     QGraphicsScene(parent),
     grid_size(10),
@@ -65,11 +66,12 @@ void SchematicScene::mousePressEvent(QGraphicsSceneMouseEvent* event) {
             this->current_line = new Line;
             this->addItem(this->current_line);
 
-            auto pos {event->scenePos()};
-            qreal xV = round(pos.x()/this->grid_size)*this->grid_size;
-            qreal yV = round(pos.y()/this->grid_size)*this->grid_size;
+            /*auto pos {event->scenePos()};
+            qreal xV = qRound(pos.x()/this->grid_size)*this->grid_size;
+            qreal yV = qRound(pos.y()/this->grid_size)*this->grid_size;
 
-            this->current_line->setPos(xV, yV);
+            this->current_line->setPos(xV, yV);*/
+            this->current_line->setBegin(event->scenePos());
         }
     }
 }
@@ -81,7 +83,6 @@ void SchematicScene::mouseReleaseEvent(QGraphicsSceneMouseEvent* event) {
 
 void SchematicScene::mouseMoveEvent(QGraphicsSceneMouseEvent* event) {
     QGraphicsScene::mouseReleaseEvent(event);
-    qDebug() << "Ti";
 
     // Draw Line
     if(this->drawLine) {

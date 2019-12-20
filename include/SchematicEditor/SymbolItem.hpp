@@ -1,6 +1,7 @@
 #ifndef SYMBOLITEM_HPP
 #define SYMBOLITEM_HPP
 
+#include <QtCore/QObject>
 #include <QtWidgets/QGraphicsItem>
 
 class SymbolItem : public QGraphicsItem
