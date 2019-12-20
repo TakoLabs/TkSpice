@@ -10,25 +10,28 @@ CONFIG += c++17
 
 SOURCES +=  \
             src/main.cpp \
-            src/Node.cpp \
-            src/Resistor.cpp \
             src/MainWindow.cpp \
-            src/Model.cpp \
-            src/Symbol.cpp \
             src/LibraryManager/LibraryManager.cpp \
             src/LibraryManager/Library.cpp \
-    src/Widgets/SchematicEditor.cpp
+            src/SchematicEditor/SchematicWidget.cpp \
+            src/SchematicEditor/SchematicScene.cpp \
+            src/SchematicEditor/SymbolItem.cpp \
+            src/SchematicEditor/Resistor.cpp \
+            src/SchematicEditor/Voltage.cpp \
+    src/SchematicEditor/Pin.cpp \
+    src/SchematicEditor/Line.cpp
 
 HEADERS += \
-            include/Node.hpp \
-            include/Resistor.hpp \
-            include/Component.hpp \
             include/MainWindow.hpp \
-            include/Model.hpp \
-            include/Symbol.hpp \
             include/LibraryManager/LibraryManager.hpp \
             include/LibraryManager/Library.hpp \
-            include/Widgets/SchematicEditor.hpp
+            include/SchematicEditor/SchematicWidget.hpp \
+            include/SchematicEditor/SchematicScene.hpp \
+            include/SchematicEditor/SymbolItem.hpp \
+            include/SchematicEditor/Resistor.hpp \
+            include/SchematicEditor/Voltage.hpp \
+    include/SchematicEditor/Pin.hpp \
+    include/SchematicEditor/Line.hpp
 
 INCLUDEPATH += include
 

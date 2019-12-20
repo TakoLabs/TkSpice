@@ -8,7 +8,7 @@ class MainWindow;
 }
 
 
-class SchematicEditor;
+class SchematicWidget;
 class QLabel;
 
 
@@ -21,16 +21,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void setEditorZoomStatus(double factor);
-    void setEditorMousePosStatus(const QPoint& pos);
-
     void on_aAddResistor_triggered();
+
+    void on_aAddVoltage_triggered();
 
 private:
     Ui::MainWindow *ui;
-    SchematicEditor* editor;
-    QLabel* statusZoom;
-    QLabel* statusMousePos;
+    SchematicWidget* editor;
 
 };
 

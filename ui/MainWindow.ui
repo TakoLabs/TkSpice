@@ -66,6 +66,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="aAddResistor"/>
+   <addaction name="aAddVoltage"/>
   </widget>
   <action name="aNewProject">
    <property name="text">
@@ -143,6 +144,11 @@
    </property>
    <property name="toolTip">
     <string>Add Resistor</string>
+   </property>
+  </action>
+  <action name="aAddVoltage">
+   <property name="text">
+    <string>Add Voltage</string>
    </property>
   </action>
  </widget>
